@@ -1,0 +1,39 @@
+briefingName = "COOP 05 By a Hair";
+author = "Raws";
+
+class Header {
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 5;
+};
+
+overviewText = "Stop the hair growth resupply convoy from reaching Camp Rogain.";
+onLoadName = "By a Hair";
+onLoadMission = "Stop the hair growth resupply convoy from reaching Camp Rogain.";
+
+class CfgIdentities {
+	class Dr_Eagle {
+		name = "Dr. Eagle";
+		face = "face01";
+		glasses = Sunglasses;
+		speaker = "Dan";
+		pitch = 1.1;
+	};
+};
+
+class CfgRadio {
+	class BLUFOR_SquadEnteredConvoyStartTrigger {
+		sound[] = {};
+		title = "I've got eyes on the convoy. You've got about five minutes before things get hairy down there.";
+	};
+
+	class BLUFOR_ConvoyProgressTrigger0 {
+		sound[] = {};
+		title = "The convoy's making its way up the ridge. You've got about two minutes to get to cover.";
+	};
+
+	class BLUFOR_ConvoyProgressTrigger1 {
+		sound[] = {};
+		title = "Here they come! Get your dicks out!";
+	};
+};

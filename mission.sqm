@@ -13,11 +13,11 @@ class Mission
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_BLUFOR",
 		"A3_Air_F_MH9",
 		"A3_Soft_F_Ifrit",
 		"A3_Characters_F_OPFOR",
 		"A3_Soft_F_Quadbike",
+		"A3_Characters_F_BLUFOR",
 		"a3_map_stratis"
 	};
 	randomSeed=42917;
@@ -43,27 +43,8 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=8;
 		class Item0
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4500.73,103.36861,6815.8584};
-					azimut=257.75299;
-					id=0;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item1
 		{
 			side="WEST";
 			class Vehicles
@@ -73,9 +54,9 @@ class Mission
 				{
 					position[]={4492.0874,103.98435,6814.8174};
 					azimut=-75.053497;
-					special="NONE";
+					special="FLY";
 					age="ACTUAL";
-					id=1;
+					id=0;
 					side="WEST";
 					vehicle="B_MH9_F";
 					leader=1;
@@ -83,7 +64,7 @@ class Mission
 					skill=0.79022229;
 					fuel=0.62610686;
 					text="blufor_chopper";
-					init="(group this) setGroupId [""Dr. Eagle""]; this disableAI ""AUTOTARGET""; this setCaptive true;";
+					init="(group this) setGroupId [""Dr. Eagle""]; this disableAI ""AUTOTARGET""; this setCaptive true; this flyInHeight 0;";
 				};
 			};
 			class Waypoints
@@ -91,7 +72,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={4485.1182,104.08579,6814.9546};
+					position[]={4485.166,103.98306,6814.8638};
 					type="HOLD";
 					synchronizations[]={1};
 					class Effects
@@ -102,8 +83,10 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4004.3687,142.77049,7039.5146};
-					type="LOITER";
+					position[]={3942.5095,-8.0850439,7612.5898};
+					idStatic=114483;
+					idObject=-1650204877;
+					type="HOLD";
 					class Effects
 					{
 					};
@@ -111,7 +94,7 @@ class Mission
 				};
 			};
 		};
-		class Item2
+		class Item1
 		{
 			side="EAST";
 			class Vehicles
@@ -123,7 +106,7 @@ class Mission
 					azimut=66.244652;
 					special="NONE";
 					age="ACTUAL";
-					id=2;
+					id=1;
 					side="EAST";
 					vehicle="O_Ifrit_GMG_F";
 					leader=1;
@@ -137,7 +120,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=3;
+					id=2;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.79022229;
@@ -149,14 +132,14 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=4;
+					id=3;
 					side="EAST";
 					vehicle="O_Soldier_lite_F";
 					skill=0.79022229;
 				};
 			};
 		};
-		class Item3
+		class Item2
 		{
 			side="EAST";
 			class Vehicles
@@ -168,7 +151,7 @@ class Mission
 					azimut=86.0942;
 					special="NONE";
 					age="ACTUAL";
-					id=5;
+					id=4;
 					side="EAST";
 					vehicle="O_Quadbike_F";
 					leader=1;
@@ -183,14 +166,14 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=6;
+					id=5;
 					side="EAST";
 					vehicle="O_Soldier_AR_F";
 					skill=0.79022229;
 				};
 			};
 		};
-		class Item4
+		class Item3
 		{
 			side="EAST";
 			class Vehicles
@@ -202,7 +185,7 @@ class Mission
 					azimut=84.788872;
 					special="NONE";
 					age="ACTUAL";
-					id=7;
+					id=6;
 					side="EAST";
 					vehicle="O_Ifrit_MG_F";
 					leader=1;
@@ -216,7 +199,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=8;
+					id=7;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.79022229;
@@ -228,14 +211,14 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=9;
+					id=8;
 					side="EAST";
 					vehicle="O_Soldier_lite_F";
 					skill=0.79022229;
 				};
 			};
 		};
-		class Item5
+		class Item4
 		{
 			side="EAST";
 			class Vehicles
@@ -247,7 +230,7 @@ class Mission
 					azimut=58.855904;
 					special="NONE";
 					age="ACTUAL";
-					id=10;
+					id=9;
 					side="EAST";
 					vehicle="O_Ifrit_F";
 					leader=1;
@@ -261,7 +244,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=11;
+					id=10;
 					side="EAST";
 					vehicle="O_Soldier_lite_F";
 					skill=0.79022229;
@@ -273,7 +256,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=12;
+					id=11;
 					side="EAST";
 					vehicle="O_Soldier_lite_F";
 					skill=0.79022229;
@@ -285,14 +268,14 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=13;
+					id=12;
 					side="EAST";
 					vehicle="O_Soldier_GL_F";
 					skill=0.79022229;
 				};
 			};
 		};
-		class Item6
+		class Item5
 		{
 			side="EAST";
 			class Vehicles
@@ -304,7 +287,7 @@ class Mission
 					azimut=78.797501;
 					special="NONE";
 					age="ACTUAL";
-					id=14;
+					id=13;
 					side="EAST";
 					vehicle="O_Ifrit_F";
 					leader=1;
@@ -318,7 +301,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=15;
+					id=14;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.79022229;
@@ -330,7 +313,7 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=16;
+					id=15;
 					side="EAST";
 					vehicle="O_medic_F";
 					skill=0.79022229;
@@ -342,10 +325,103 @@ class Mission
 					azimut=86.0942;
 					special="CARGO";
 					age="ACTUAL";
-					id=17;
+					id=16;
 					side="EAST";
 					vehicle="O_Soldier_lite_F";
 					skill=0.79022229;
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3578.6494,3.1828465,7503.6099};
+					azimut=-252.55156;
+					special="NONE";
+					age="ACTUAL";
+					id=17;
+					side="WEST";
+					vehicle="B_MH9_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.79022229;
+					text="blufor_chopper_1";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={4498.9521,103.71462,6814.9399};
+					azimut=257.75299;
+					special="CARGO";
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this moveInCargo blufor_chopper;";
+				};
+				class Item1
+				{
+					position[]={4501.9424,103.05561,6816.4536};
+					azimut=257.75299;
+					special="CARGO";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this moveInCargo blufor_chopper;";
+				};
+				class Item2
+				{
+					position[]={4501.7949,103.88878,6813.6108};
+					azimut=257.75299;
+					special="CARGO";
+					id=20;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this moveInCargo blufor_chopper;";
+				};
+				class Item3
+				{
+					position[]={4504.7109,102.70252,6816.5645};
+					azimut=257.75299;
+					special="CARGO";
+					id=21;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this moveInCargo blufor_chopper;";
+				};
+				class Item4
+				{
+					position[]={4504.6006,103.74173,6813.6108};
+					azimut=257.75299;
+					special="CARGO";
+					id=22;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this moveInCargo blufor_chopper;";
 				};
 			};
 		};
@@ -570,7 +646,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			position[]={4475.3477,143.68745,6505.2734};
@@ -580,7 +656,7 @@ class Mission
 			activationBy="MEMBER";
 			interruptable=1;
 			age="UNKNOWN";
-			idVehicle=0;
+			idVehicle=18;
 			name="start_convoy";
 			expCond="this && isServer";
 			expActiv="_convoy = execVM ""convoy\start.sqf""";
@@ -597,7 +673,7 @@ class Mission
 			interruptable=1;
 			type="LOOSE";
 			age="UNKNOWN";
-			idVehicle=5;
+			idVehicle=4;
 			name="convoy_reached_destination";
 			expCond="this && isServer";
 			class Effects
@@ -627,7 +703,7 @@ class Mission
 			activationBy="MEMBER";
 			interruptable=1;
 			age="UNKNOWN";
-			idVehicle=5;
+			idVehicle=4;
 			name="trigger_convoy_progress_0";
 			expCond="this && isServer";
 			expActiv="blufor_chopper sideRadio ""BLUFOR_ConvoyProgressTrigger0"";";
@@ -641,7 +717,7 @@ class Mission
 			activationBy="MEMBER";
 			interruptable=1;
 			age="UNKNOWN";
-			idVehicle=5;
+			idVehicle=4;
 			name="trigger_convoy_progress_1";
 			expCond="this && isServer";
 			expActiv="bluefor_chopper sideRadio ""BLUFOR_ConvoyProgressTrigger1"";";
@@ -660,14 +736,31 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			idVehicle=0;
+			idVehicle=18;
 			name="trigger_squad_left_staging_area";
 			expCond="this && isServer";
+			expActiv="blufor_chopper flyInHeight 100;";
 			class Effects
 			{
 			};
 			synchronizations[]={0};
 			syncId=1;
+		};
+		class Item6
+		{
+			position[]={3953.6355,0.06617751,7603.3853};
+			a=150;
+			b=150;
+			activationBy="VEHICLE";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=0;
+			name="trigger_blufor_chopper_disappear";
+			expCond="this && isServer";
+			expActiv="deleteVehicle blufor_chopper; hint ""Deleted BLUFOR chopper"";";
+			class Effects
+			{
+			};
 		};
 	};
 };

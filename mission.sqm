@@ -83,7 +83,7 @@ class Mission
 					skill=0.79022229;
 					fuel=0.62610686;
 					text="blufor_chopper";
-					init="(group this) setGroupId [""Dr. Eagle""];";
+					init="(group this) setGroupId [""Dr. Eagle""]; this disableAI ""AUTOTARGET""; this setCaptive true;";
 				};
 			};
 			class Waypoints

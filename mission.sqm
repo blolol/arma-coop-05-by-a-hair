@@ -54,8 +54,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4492.0874,103.98435,6814.8174};
-					azimut=-75.053497;
+					position[]={4907.7642,-0.1060081,6983.6284};
+					azimut=-109.333;
 					special="FLY";
 					age="ACTUAL";
 					id=0;
@@ -66,17 +66,17 @@ class Mission
 					skill=0.79022229;
 					fuel=0.62610686;
 					text="blufor_chopper";
-					init="(group this) setGroupId [""Dr. Eagle""]; this disableAI ""AUTOTARGET""; this setCaptive true; this flyInHeight 0;";
+					init="(group this) setGroupId [""Dr. Eagle""]; this disableAI ""AUTOTARGET""; this setCaptive true; this flyInHeight 25;";
 				};
 			};
 			class Waypoints
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
-					position[]={4484.6968,103.99733,6814.4883};
-					type="HOLD";
-					synchronizations[]={1};
+					position[]={4491.6162,104.06377,6813.6318};
+					type="TR UNLOAD";
+					synchronizations[]={2};
 					class Effects
 					{
 					};
@@ -85,9 +85,18 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3942.5095,-8.0813475,7612.5898};
-					idStatic=114483;
-					idObject=-1650204877;
+					position[]={4487.8828,104.06185,6813.667};
+					type="HOLD";
+					synchronizations[]={3};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					syncId=1;
+				};
+				class Item2
+				{
+					position[]={3462.6326,74.850822,7251.6875};
 					type="HOLD";
 					class Effects
 					{
@@ -342,7 +351,7 @@ class Mission
 				items=5;
 				class Item0
 				{
-					position[]={4498.9521,103.71462,6814.9399};
+					position[]={4914.6289,-0.25989977,6983.751};
 					azimut=257.75299;
 					special="CARGO";
 					id=17;
@@ -353,11 +362,11 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="squad_leader";
-					init="this moveInCargo blufor_chopper;";
+					init="this moveInCargo blufor_chopper; squad = group this;";
 				};
 				class Item1
 				{
-					position[]={4501.9424,103.05561,6816.4536};
+					position[]={4917.6191,-0.26127118,6985.2646};
 					azimut=257.75299;
 					special="CARGO";
 					id=18;
@@ -370,7 +379,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4501.7949,103.88878,6813.6108};
+					position[]={4917.4717,-0.29725784,6982.4219};
 					azimut=257.75299;
 					special="CARGO";
 					id=19;
@@ -382,7 +391,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={4504.7109,102.70252,6816.5645};
+					position[]={4920.3877,-0.26392725,6985.3755};
 					azimut=257.75299;
 					special="CARGO";
 					id=20;
@@ -394,7 +403,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={4504.6006,103.74173,6813.6108};
+					position[]={4920.2773,-0.29072464,6982.4219};
 					azimut=257.75299;
 					special="CARGO";
 					id=21;
@@ -405,6 +414,21 @@ class Mission
 					init="this moveInCargo blufor_chopper;";
 				};
 			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4492.4512,104.61008,6808.8496};
+					type="GETOUT";
+					synchronizations[]={0};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					syncId=2;
+				};
+			};
 		};
 	};
 	class Vehicles
@@ -412,8 +436,8 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={4490.3394,92.375305,6831.2827};
-			azimut=-75.053497;
+			position[]={4491.6099,104.05755,6813.7329};
+			azimut=-90.870094;
 			special="FLY";
 			age="ACTUAL";
 			id=22;
@@ -643,7 +667,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			position[]={4517.9268,138.58871,6512.856};
@@ -724,24 +748,38 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={4503.229,104.56889,6809.2764};
-			a=25;
-			b=15;
+			position[]={4501.29,100.17924,6821.4873};
+			a=40;
+			b=30;
 			rectangular=1;
-			activationBy="GROUP";
+			activationBy="ANY";
 			activationType="NOT PRESENT";
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			idVehicle=17;
-			name="trigger_squad_left_staging_area";
-			expCond="this && isServer";
-			expActiv="blufor_chopper flyInHeight 100;";
+			expCond="squad_has_entered_staging_area && {_x in thisList && alive _x} count units squad == 0 && {_x in blufor_chopper && alive _x} count units squad == 0";
+			expActiv="hint ""Squad has exited staging area""";
 			class Effects
 			{
 			};
-			synchronizations[]={0};
-			syncId=1;
+			synchronizations[]={1};
+			syncId=3;
+		};
+		class Item6
+		{
+			position[]={4500.6646,104.30243,6811.1987};
+			a=20;
+			b=10;
+			rectangular=1;
+			activationBy="GROUP";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=17;
+			name="squad_entered_staging_area";
+			expActiv="squad_has_entered_staging_area = true; hint ""Squad has entered staging area""";
+			class Effects
+			{
+			};
 		};
 	};
 };

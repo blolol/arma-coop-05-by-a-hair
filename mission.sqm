@@ -43,7 +43,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			side="WEST";
@@ -72,7 +72,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={4485.166,103.98306,6814.8638};
+					position[]={4485.166,103.98002,6814.8638};
 					type="HOLD";
 					synchronizations[]={1};
 					class Effects
@@ -83,7 +83,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3942.5095,-8.0850439,7612.5898};
+					position[]={3942.5095,-8.0813475,7612.5898};
 					idStatic=114483;
 					idObject=-1650204877;
 					type="HOLD";
@@ -337,41 +337,20 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
-				class Item0
-				{
-					position[]={3578.6494,3.1828465,7503.6099};
-					azimut=-252.55156;
-					special="NONE";
-					age="ACTUAL";
-					id=17;
-					side="WEST";
-					vehicle="B_MH9_F";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.79022229;
-					text="blufor_chopper_1";
-				};
-			};
-		};
-		class Item7
-		{
-			side="WEST";
-			class Vehicles
-			{
 				items=5;
 				class Item0
 				{
 					position[]={4498.9521,103.71462,6814.9399};
 					azimut=257.75299;
 					special="CARGO";
-					id=18;
+					id=17;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
+					text="squad_leader";
 					init="this moveInCargo blufor_chopper;";
 				};
 				class Item1
@@ -379,12 +358,13 @@ class Mission
 					position[]={4501.9424,103.05561,6816.4536};
 					azimut=257.75299;
 					special="CARGO";
-					id=19;
+					id=18;
 					side="WEST";
-					vehicle="B_soldier_LAT_F";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
+					text="squad_follower_0";
 					init="this moveInCargo blufor_chopper;";
 				};
 				class Item2
@@ -392,11 +372,12 @@ class Mission
 					position[]={4501.7949,103.88878,6813.6108};
 					azimut=257.75299;
 					special="CARGO";
-					id=20;
+					id=19;
 					side="WEST";
-					vehicle="B_soldier_LAT_F";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					text="squad_follower_1";
 					init="this moveInCargo blufor_chopper;";
 				};
 				class Item3
@@ -404,11 +385,12 @@ class Mission
 					position[]={4504.7109,102.70252,6816.5645};
 					azimut=257.75299;
 					special="CARGO";
-					id=21;
+					id=20;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					text="squad_follower_2";
 					init="this moveInCargo blufor_chopper;";
 				};
 				class Item4
@@ -416,11 +398,12 @@ class Mission
 					position[]={4504.6006,103.74173,6813.6108};
 					azimut=257.75299;
 					special="CARGO";
-					id=22;
+					id=21;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					text="squad_follower_3";
 					init="this moveInCargo blufor_chopper;";
 				};
 			};
@@ -646,17 +629,17 @@ class Mission
 	};
 	class Sensors
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
-			position[]={4475.3477,143.68745,6505.2734};
+			position[]={4517.9268,138.58871,6512.856};
 			a=100;
 			b=300;
-			angle=-108.346;
+			angle=-115.2263;
 			activationBy="MEMBER";
 			interruptable=1;
 			age="UNKNOWN";
-			idVehicle=18;
+			idVehicle=17;
 			name="start_convoy";
 			expCond="this && isServer";
 			expActiv="_convoy = execVM ""convoy\start.sqf""";
@@ -736,7 +719,7 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			idVehicle=18;
+			idVehicle=17;
 			name="trigger_squad_left_staging_area";
 			expCond="this && isServer";
 			expActiv="blufor_chopper flyInHeight 100;";
@@ -745,22 +728,6 @@ class Mission
 			};
 			synchronizations[]={0};
 			syncId=1;
-		};
-		class Item6
-		{
-			position[]={3953.6355,0.06617751,7603.3853};
-			a=150;
-			b=150;
-			activationBy="VEHICLE";
-			interruptable=1;
-			age="UNKNOWN";
-			idVehicle=0;
-			name="trigger_blufor_chopper_disappear";
-			expCond="this && isServer";
-			expActiv="deleteVehicle blufor_chopper; hint ""Deleted BLUFOR chopper"";";
-			class Effects
-			{
-			};
 		};
 	};
 };

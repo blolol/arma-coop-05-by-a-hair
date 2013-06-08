@@ -54,7 +54,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4907.7642,-0.1060081,6983.6284};
+					position[]={5086.3901,-0.18089062,7494.3066};
 					azimut=-109.333;
 					special="FLY";
 					age="ACTUAL";
@@ -351,7 +351,7 @@ class Mission
 				items=5;
 				class Item0
 				{
-					position[]={4914.6289,-0.25989977,6983.751};
+					position[]={5093.2549,-0.12577747,7494.4292};
 					azimut=257.75299;
 					special="CARGO";
 					id=17;
@@ -366,7 +366,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4917.6191,-0.26127118,6985.2646};
+					position[]={5096.2451,-0.026692003,7495.9429};
 					azimut=257.75299;
 					special="CARGO";
 					id=18;
@@ -379,7 +379,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4917.4717,-0.29725784,6982.4219};
+					position[]={5096.0977,-0.10373446,7493.1001};
 					azimut=257.75299;
 					special="CARGO";
 					id=19;
@@ -391,7 +391,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={4920.3877,-0.26392725,6985.3755};
+					position[]={5099.0137,0.027645074,7496.0537};
 					azimut=257.75299;
 					special="CARGO";
 					id=20;
@@ -403,7 +403,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={4920.2773,-0.29072464,6982.4219};
+					position[]={5098.9033,-0.02117195,7493.1001};
 					azimut=257.75299;
 					special="CARGO";
 					id=21;

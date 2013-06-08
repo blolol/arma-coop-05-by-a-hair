@@ -22,18 +22,48 @@ class CfgIdentities {
 };
 
 class CfgRadio {
+	class BLUFOR_IntroTrigger0 {
+		sound[] = {};
+		title = "LISTEN UP, FAGGOTS. THOSE BALDIES AT CAMP ROGAIN ARE ABOUT TO TRY ANOTHER RESUPPLY. YOU'RE GOING IN THERE TO KEEP THEM HAIRLESS";
+	};
+
+	class BLUFOR_IntroTrigger1 {
+		sound[] = {};
+		title = "WHEN WE HIT THE GROUND, GRAB WHAT YOU NEED FROM THE CHOPPER AND FUCK OFF";
+	};
+
+	class BLUFOR_IntroTrigger2 {
+		sound[] = {};
+		title = "WE'RE WAITING ON A RESUPPLY OURSELVES, SO YOU'RE GONNA HAVE TO DO THIS THE OLD-FASHIONED WAY";
+	};
+
+	class BLUFOR_IntroTrigger3 {
+		sound[] = {};
+		title = "LMAO";
+	};
+
+	class BLUFOR_IntroTrigger4 {
+		sound[] = {};
+		title = "GRAB YOUR SACKS, AND I'LL GO LET YOU KNOW WHEN YOU'RE ABOUT TO BE DICKED UP THE ASS";
+	};
+
+	class BLUFOR_GoodbyeSquad {
+		sound[] = {};
+		title = "CYA LATER, SHITLORDS!";
+	};
+
 	class BLUFOR_SquadEnteredConvoyStartTrigger {
 		sound[] = {};
-		title = "I've got eyes on the convoy. You've got about five minutes before things get hairy down there.";
+		title = "I'VE GOT EYES ON THE CONVOY. YOU'VE GOT ABOUT FIVE MINUTES BEFORE THINGS GET HAIRY DOWN THERE.";
 	};
 
 	class BLUFOR_ConvoyProgressTrigger0 {
 		sound[] = {};
-		title = "The convoy's making its way up the ridge. You've got about two minutes to get to cover.";
+		title = "HEY FAGS, THE CONVOY'S MAKING ITS WAY UP THE RIDGE. YOU'VE GOT LIKE TWO MINUTES TO BEND OVER.";
 	};
 
 	class BLUFOR_ConvoyProgressTrigger1 {
 		sound[] = {};
-		title = "Here they come! Get your dicks out!";
+		title = "OH SHIT, HERE THEY COME. PANTS OFF, SOLDIERS.";
 	};
 };

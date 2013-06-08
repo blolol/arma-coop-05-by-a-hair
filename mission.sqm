@@ -114,12 +114,12 @@ class Mission
 				class Item0
 				{
 					position[]={3011.4563,18.659307,6145.3892};
-					azimut=66.244652;
+					azimut=66.244698;
 					special="NONE";
 					age="ACTUAL";
 					id=1;
 					side="EAST";
-					vehicle="O_Ifrit_GMG_F";
+					vehicle="O_Ifrit_MG_F";
 					leader=1;
 					skill=0.79022229;
 					text="convoy_vehicle_4";
@@ -670,11 +670,13 @@ class Mission
 		items=7;
 		class Item0
 		{
-			position[]={4517.9268,138.58871,6512.856};
+			position[]={4510.3496,151.08633,6546.4121};
 			a=100;
 			b=300;
-			angle=-115.2263;
+			angle=-115.226;
 			activationBy="MEMBER";
+			timeoutMid=2;
+			timeoutMax=5;
 			interruptable=1;
 			age="UNKNOWN";
 			idVehicle=17;
